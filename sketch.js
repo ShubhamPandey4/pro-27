@@ -6,11 +6,9 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
+const Constraint = Matter.Constraint;
 
-function preload()
-{
-	
-}
+var bobDiameter = 30;
 
 function setup() {
 	createCanvas(1300, 700);
@@ -27,7 +25,7 @@ function setup() {
     bob5 = new Bob(560, 500, 30);
     
    roof = new Roof(620,100,500,50);
-   rope1 = new Rope(bobObject1.body, roofObject.body, -bobDiameter*2, 0);
+   rope1 = new Rope(bob1.body, roof.body, -bobDiameter*2, 0);
 
 
 
@@ -46,7 +44,7 @@ function draw() {
   bob5.display();
 
   roof.display();
-  rope.display();
+  rope1.display();
 
 
  
